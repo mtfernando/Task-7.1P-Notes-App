@@ -38,7 +38,14 @@ public class changeNoteActivity extends AppCompatActivity {
         noteTitle = intent.getStringExtra("noteTitle");
         noteDesc = intent.getStringExtra("noteDesc");
 
+        //Set EditTexts based on data received
+        noteTitleEditText.setText(noteTitle);
+        noteDescEditText.setText(noteDesc);
+
+        //Note object created from existing version of the note.
+        //This is not used in the current code, but created in case a user arises.
         oldNote = new Note(noteID, noteTitle, noteDesc);
+
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

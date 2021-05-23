@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public DatabaseHelper(Context context) {
         super(context, Util.DATABASE_NAME, null, Util.DATABASE_VERSION);
     }
 
@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<Note> getAllNotes(){
-        SQLiteDatabase db = this.getReadableDatabase()
+        SQLiteDatabase db = this.getReadableDatabase();
         List<Note> notesList = new ArrayList<>();
 
         Cursor c = db.rawQuery(Util.FETCH_ALL_NOTES, null);

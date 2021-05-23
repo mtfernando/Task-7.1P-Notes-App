@@ -12,7 +12,7 @@ public class Util {
 
     //SQL Table Creation
     public static final String CREATE_NOTES_TABLE = "CREATE TABLE " + NOTES_TABLE_NAME
-            + "(" + NOTE_ID + " TEXT PRIMARY KEY AUTOINCREMENT," + NOTE_HEADER + " TEXT," +
+            + "(" + NOTE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + NOTE_HEADER + " TEXT," +
             NOTE_DESC + " TEXT)";
 
     public static final String FETCH_ALL_NOTES = "SELECT * FROM " + Util.NOTES_TABLE_NAME;

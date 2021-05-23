@@ -3,7 +3,6 @@ package com.example.notesapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,8 +23,8 @@ public class NewNoteActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        noteTitleEditText = findViewById(R.id.noteTitleEditText);
-        noteDescEditText = findViewById(R.id.noteDescEditText);
+        noteTitleEditText = findViewById(R.id.changeNoteTitleEditText);
+        noteDescEditText = findViewById(R.id.changeNoteDescEditText);
         saveButton = findViewById(R.id.saveButton);
 
         saveButton.setOnClickListener(new View.OnClickListener() {

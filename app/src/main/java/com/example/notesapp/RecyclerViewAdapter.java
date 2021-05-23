@@ -61,12 +61,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 note = noteList.get(holder.getAdapterPosition());
 
                 int noteID = note.getId();
-                String noteHeader = note.getHeader();
+                String noteTitle = note.getHeader();
                 String noteDesc = note.getDesc();
 
                 Intent intent = new Intent(context, changeNoteActivity.class);
                 intent.putExtra("noteID", noteID);
-                intent.putExtra("noteHeader", noteHeader);
+                intent.putExtra("noteTitle", noteTitle);
                 intent.putExtra("noteDesc", noteDesc);
 
                 context.startActivity(intent);
